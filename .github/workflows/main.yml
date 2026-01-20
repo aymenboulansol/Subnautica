@@ -31,5 +31,8 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: GCTweak-Dylib
-          path: .theos/obj/debug/*.dylib
+          name: My-Tweak-Files
+          path: |
+            packages/*.deb
+            .theos/obj/*.dylib
+            .theos/obj/debug/*.dylib
