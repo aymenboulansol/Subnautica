@@ -7,9 +7,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Theos
+      - name: Install Theos and SDK
         run: |
           bash -c "$(curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos)"
+          curl -LO https://github.com/theos/sdks/raw/master/iPhoneOS14.5.sdk.tar.xz
+          mkdir -p ~/theos/sdks
+          tar -xf iPhoneOS14.5.sdk.tar.xz -C ~/theos/sdks
           echo "THEOS=~/theos" >> $GITHUB_ENV
           echo "~/theos/bin" >> $GITHUB_PATH
 
