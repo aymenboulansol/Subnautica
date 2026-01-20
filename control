@@ -1,0 +1,9 @@
+Package: com.yourname.gctweak
+Name: GCTweak
+Depends: mobilesubstrate
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Disable Game Center Login
+Maintainer: YourName
+Author: YourName
+Section: Tweaks
